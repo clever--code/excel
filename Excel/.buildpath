@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="php-excel-generator"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="lib" path="php-excel-reader-2.21.zip"/>
+	<buildpathentry kind="src" path="php-excel-reader-2.21"/>
+</buildpath>
