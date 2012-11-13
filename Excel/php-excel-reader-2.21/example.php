@@ -36,12 +36,7 @@ table.excel tbody td {
 
 <body>
 <?php
-
  echo $data->dump(true,true);
- echo("<hr>");
- var_dump($data->dumptoarray());
- echo("<hr>");
- echo $data->dump_csv();
 ?>
 </body>
 </html>
