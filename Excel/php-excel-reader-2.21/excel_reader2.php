@@ -1748,8 +1748,7 @@ class Spreadsheet_Excel_Reader {
 	/*
 	 * Efetua dum em csv
 	 */
-	function dump_csv($row_numbers=false, $col_letters=false, $sheet=0, $table_class='excel')
-	{
+	function dump_csv($row_numbers=false, $col_letters=false, $sheet=0, $table_class='excel') {
 		$outs = array();
 		for($row=1; $row<=$this->rowcount($sheet); $row++)
 		{
@@ -1783,8 +1782,20 @@ class Spreadsheet_Excel_Reader {
 					}
 						$out = implode("\r\n", $outs);
 							return($out);
-					}
+	}
+
+	/*
+	 * Formata telefone
+	 */
+	function format_phone($phone) {
+		$new_phone = preg_replace("/\[<=(\d{10,})\](\d{10,})-(\d{3,})(\d{3})(\d{4})/", "($3) $4-$5", $phone); //Outputs (###) ###-####
+		 
+		if($new_phone == $phone || $new_phone == null) {
+			return $phone;
+		}else{
+			return $new_phone;
+		}
+	}
 
 }
-
 ?>
